@@ -3,6 +3,7 @@ syntax = "proto3";
 package search_business;
 
 import "gitee.com/kelvins-io/common/proto/google/api/annotations.proto";
+option go_package = "proto/micro_mall_search_proto/search_business;search_business";
 
 // 搜索服务
 service SearchBusinessService {
@@ -53,7 +54,7 @@ message SyncShopRequest {
 }
 
 message SyncShopResponse {
-
+    CommonResponse common = 1;
 }
 
 message SyncSkuInventoryRequest {
@@ -61,7 +62,7 @@ message SyncSkuInventoryRequest {
 }
 
 message SyncSkuInventoryResponse {
-
+    CommonResponse common = 1;
 }
 
 message ShopSearchRequest {
